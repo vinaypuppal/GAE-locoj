@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+	console.log("logged frm github");
 	var elMap = document.getElementById('location-map');
 	var elLocInfo = document.getElementById('location-info');
 	var elLocName = document.getElementById('location-name');
