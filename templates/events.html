@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+   	<title>Events-layout</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="/static/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/static/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="http://cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker-bs3.css" />
+	<link rel="stylesheet" type="text/css" href="/static/css/app.css"/>
+	<script type="text/javascript" src="/static/js/modernizer.js"></script>
+</head>
+<body>
+	
+	<div class="container-fluid">
+		
+		<header>
+				
+					<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+							<!-- Search Form -->
+						<form class="navbar-form navbar-left visible-lg-block" role="search">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-search fa-lg"></i></span>
+								<input type="search" class="form-control" placeholder="Search for a Friends">
+							</div>
+						</form>
+							<!-- Search Form End -->
+
+							<!-- Messages Dropdown -->
+						<ul class="nav navbar-nav messages">
+								<!-- Home Link -->
+							<li><a href="/"><i class="fa fa-home fa-2x"></i></a></li>
+
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-envelope fa-2x"></i><span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+								<li><i class="fa fa-spinner fa-pulse"></i></li>
+								<li>Loaded Thru Ajax</li>
+								</ul>
+							</li>
+						</ul>
+							<!-- Messages Dropdown End-->
+
+							<!-- Notifications Dropdown -->
+						<ul class="nav navbar-nav notifications">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-bell-o fa-2x"></i><span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><i class="fa fa-spinner fa-pulse"></i></li>
+									<li>Loaded Thru Ajax</li>
+								</ul>
+							</li>
+						</ul>
+							<!-- Notification Dropdown End-->
+							
+							<!-- User Dropdown -->
+						<ul class="nav navbar-nav user">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="/static/images/demouser.png" alt="user">Vinay P.<span class="caret"></span></a>
+								<ul class="dropdown-menu" role="menu">
+									<li><a href="/profile">Edit Profile</a></li>
+									<li><a href="/settings">Settings</a></li>
+									<li><a href="/logout">Logout</a></li>
+								</ul>
+							</li>
+						</ul>
+							<!-- User Dropdown End-->
+
+							<!-- Location Link -->
+						<ul class="nav navbar-nav location">
+							<li><a href=""><i class="fa fa-location-arrow fa-2x"></i><span id="location-name">Location</span></a></li>
+						</ul>
+
+					</nav>
+
+				</header>
+
+
+		<aside class="sidebar left hidden-xs">
+			<div class="logo">
+				<a href="/"><img src="/static/images/logo.svg" alt="logo"></a>
+			</div>
+			<div class="sidebar-body">
+				<div class="sidebar-user clearfix">
+					<div class="profile-pic pull-left">
+						<img src="/static/images/demouser.png" alt="profilepic">
+					</div>
+					<div class="info pull-left">
+						<a href="/profile">Vinay P.</a>
+						<p><i class="fa fa-users fa-lg"></i> 0</p>
+						<p><i class="fa fa-image fa-lg"></i> 0</p>
+						<p><i class="fa fa-video-camera fa-lg"></i> 0</p>
+					</div>
+				</div>
+				<div class="menu">
+					<div class="list-group">
+					  <a href="/profile" class="list-group-item ">
+					    <i class="fa fa-user fa-lg"></i>Profile
+					  </a>
+					  <a href="/loops" class="list-group-item"><i class="fa fa-random fa-lg"></i>
+					  Loops
+					  </a>
+					  <a href="/places" class="list-group-item"><i class="fa fa-paw fa-lg"></i> Places
+					  </a>
+					  <a href="" class="list-group-item active">
+					  	<i class="fa fa-calendar fa-lg"></i>  Events
+					  </a>
+					  <a href="#" class="list-group-item"><i class="fa fa-question fa-lg"></i>
+					  Help
+					  </a>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar-footer">
+				<a href="/privacy">Privacy</a> . 
+				<a href="/terms">Terms</a> . 
+				<a href="/cookies">Cookies</a>
+				<p>Locoj &copy; 2015</p>
+			</div>
+		</aside>
+
+		<main>
+
+			<div class="container-fluid">
+
+				<div class="row">
+
+					
+
+						<div class="col-md-7 col-xs-12">
+
+							<div class="events">
+								<div role="tabpanel">
+
+									<!-- Nav tabs -->
+									<ul class="nav nav-tabs" role="tablist">
+									<li role="presentation" class="active"><a href="#events" aria-controls="events" role="tab" data-toggle="tab">Events</a></li>
+										<li role="presentation"><a href="#create-events" aria-controls="create-events" role="tab" data-toggle="tab">Creat An Events</a></li>
+										<li role="presentation"><a href="#events-createdByU" aria-controls="events-createdByU" role="tab" data-toggle="tab">Created By U</a></li>
+									</ul>
+
+									<!-- Tab panes -->
+									<div class="tab-content">
+											<!-- events tab -->
+										<div role="tabpanel" class="tab-pane active" id="events">
+											<div class="panel panel-default">
+													<div class="panel-heading">
+													  <h3 class="panel-title">Event title</h3>
+													</div>
+													<ul class="list-group">
+														<li class="list-group-item">
+															<i class="fa fa-globe"></i>
+															Hyderabad
+														</li>
+														<li class="list-group-item">
+															<i class="fa fa-calendar-o"></i>
+															31 June 2015
+														</li>
+														<li class="list-group-item">
+															<i class="fa fa-clock-o"></i>
+															10:00 AM
+														</li>
+														<li class="list-group-item">
+															<i class="fa fa-users"></i>
+															2 Attendees
+															<a class="btn btn-primary btn-xs pull-right">Attend</a>
+														</li>
+													</ul> 
+													<div class="panel-body">
+													   <img src="http://www.lorempixel.com/100/100/people/1" alt="thumbnail">
+													   <img src="http://www.lorempixel.com/100/100/people/2" alt="thumbnail">
+													</div>
+												</div>	
+											
+										</div>
+											<!-- events tab end -->
+
+											<!-- create-events tab start -->
+										<div role="tabpanel" class="tab-pane fuelux" id="create-events">
+											<div class="panel panel-default">
+												<div class="panel-heading">
+													<h3 class="panel-title">Fill the Form to create an Event</h3>
+												</div>
+												<div class="panel-body">
+													<form action="/event">
+														<div class="input-group">
+														  <span class="input-group-addon" id="basic-addon1">Event Name</span>
+														  <input type="text" class="form-control" placeholder="Example:Quiz" aria-describedby="basic-addon1">
+														</div>
+														<div class="input-group">
+														<span class="input-group-addon" id="basic-addon2">Date & Time</span>
+														  <input type="text" name="daterange" placeholder="Start:date,time End:date,time " class="form-control"/>
+														</div>
+														<div class="input-group">
+														  <span class="input-group-addon" id="basic-addon1">Search Location</span>
+														  <input id="events-address" type="text" class="form-control" placeholder="city" aria-describedby="basic-addon1">
+														</div>
+														<div class="createevent-info">**Use above input box to search city or area and use map to precisely locate the address</div>
+														<a href="" class="btn btn-primary  pull-right">Create</a>
+													</form>
+												</div>
+											</div>
+										</div>
+											<!-- create-events tab end -->
+
+											<!-- attended-events tab start -->
+										<div role="tabpanel" class="tab-pane" id="events-createdByU">
+											<div class="center"><i class="fa fa-spinner fa-spin fa-4x"></i></div>
+										</div>
+											<!-- friends tab end -->
+									</div>
+										<!-- tab panes content end -->
+								</div>
+									<!-- tab panel end -->
+							</div>
+							<!-- events div end -->
+						</div>
+						<div class="col-md-5 profile-right-side">
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Select Location on Map</h3>
+								</div>
+								<div class="panel-body" id="events-map">
+																
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Title</h3>
+								</div>
+								<div class="panel-body">
+									<i class="fa fa-spinner fa-pulse"></i>Loading....
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Title</h3>
+								</div>
+								<div class="panel-body">
+									<i class="fa fa-spinner fa-pulse"></i>Loading....
+								</div>
+							</div>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h3 class="panel-title">Title</h3>
+								</div>
+								<div class="panel-body">
+									<i class="fa fa-spinner fa-pulse"></i>Loading....
+								</div>
+							</div>
+						</div>
+					</div>
+
+			</div>
+		</main>
+	</div>    	
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+   <script src="/static/js/jquery-1.11.2.min.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?sensor=false&libraries=places"></script>
+	<script type="text/javascript" src="http://cdn.jsdelivr.net/momentjs/2.9.0/moment.min.js"></script>
+<script type="text/javascript" src="http://cdn.jsdelivr.net/bootstrap.daterangepicker/1/daterangepicker.js"></script>
+<script type="text/javascript" src="/static/js/locationpicker.jquery.js"></script>
+	<script type="text/javascript" src="/static/js/app.js"></script>
+</body>
+</html>
